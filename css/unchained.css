@@ -1,0 +1,105 @@
+:root {
+	color-scheme: light dark;
+	
+	--page-bg: #ffffff;
+	--console-bg: #f3f4f6;
+	--console-text: #111827;
+	--console-error: #dc2626;
+	--button-bg: #e5e7eb;
+	--button-border: #d1d5db;
+	--button-hover: #d1d5db;
+	--code-color: #6b7280;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--page-bg: #111111;
+		--console-bg: #1e1e1e;
+		--console-text: #d4d4d4;
+		--console-error: #f87171;
+		--button-bg: #222222;
+		--button-border: #444444;
+		--button-hover: #374151;
+		--code-color: #888888;
+	}
+}
+
+html {
+
+	margin: 0;
+	padding: 0;
+
+	width: 100%;
+	height: 100%;
+
+	-webkit-text-size-adjust: 100%;
+	-webkit-tap-highlight-color: transparent;
+
+}
+
+body {
+
+	margin: 0;
+	padding: 0;
+
+	width: 100%;
+	height: 100%;
+	
+	font-family: 'Courier New', Courier, monospace;
+
+	background: var(--page-bg);
+	color: var(--console-text);
+
+}
+
+#wrap {
+	width: 100%;
+	height: 100%;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	padding: 10px;
+}
+
+#buttons {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	margin-bottom: 10px;
+}
+
+button {
+	background: var(--button-bg);
+	color: var(--console-text);
+	border: 1px solid var(--button-border);
+	padding: 4px 6px;
+	cursor: pointer;
+	font-family: inherit;
+	border-radius: 4px;
+}
+
+button:hover {
+	background: var(--button-hover);
+}
+
+#console {
+	background: var(--console-bg);
+	box-sizing: border-box;
+	padding: 10px;
+	white-space: pre-wrap;
+	word-wrap: break-word;
+	font-size: 14px;
+	width: 100%;
+	height: 100%;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+.error {
+	color: var(--console-error);
+}
+
+.code {
+	color: var(--code-color);
+	margin: 10px 0;
+}
